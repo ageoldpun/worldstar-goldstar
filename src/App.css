@@ -4,9 +4,13 @@ body {
   text-align: center;
 }
 
+h1 {
+  font-size: 48px;
+}
+
 .header {
-  height: 260px;
-  border-bottom: 3px solid;
+  height: 320px;
+  border-bottom: 2px solid;
 }
 
 .logo {

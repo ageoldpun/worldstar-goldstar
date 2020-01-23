@@ -5,10 +5,11 @@ function App() {
   return (
     <div>
       <header className="header">
-        <h1>WORLDSTAR GOLDSTAR</h1>
-        <img className="logo" src="WorldStarGoldStarSmall.png" alt="WORLDSTAR GOLDSTAR" />
+        <h1>Worldstar</h1>
+        <img className="logo" src="WorldStarGoldStarSmall.png" alt="Worldstar Gold Star" />
+        <h1>Gold Star</h1>
       </header>
-      <div className="container mt-5">
+      <div className="container mt-4">
         <div className="row">
           <div className="col"></div>
           <div className="col-6">
@@ -25,7 +26,7 @@ function App() {
                 <label for="reason">Why do they deserve a gold star?</label>
                 <textarea class="form-control" id="reason" rows="6"></textarea>
               </div>
-              <button type="submit" className="btn btn-dark">Send</button>
+              <button type="submit" className="btn btn-dark">SEND</button>
             </form>
           </div>
           <div className="col"></div>

@@ -1,14 +1,15 @@
 body {
   font-family: Copperplate, "Copperplate Gothic Light", fantasy;
   background-color: #f8f8f8;
-  text-align: center;
 }
 
 h1 {
+  text-align: center;
   font-size: 48px;
 }
 
 .header {
+  text-align: center;
   height: 320px;
   border-bottom: 2px solid;
 }

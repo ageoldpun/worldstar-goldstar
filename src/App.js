@@ -26,7 +26,7 @@ function App() {
                 <label for="reason">Why do they deserve a gold star?</label>
                 <textarea class="form-control" id="reason" rows="6"></textarea>
               </div>
-              <button type="submit" className="btn btn-dark">SEND</button>
+              <button type="submit" className="btn btn-dark float-right">SEND</button>
             </form>
           </div>
           <div className="col"></div>

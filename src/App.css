@@ -1,3 +1,14 @@
-.App {
+body {
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  background-color: #fff5ee;
+  text-align: center;
+}
 
+.header {
+  height: 260px;
+  border-bottom: 3px solid;
+}
+
+.logo {
+  width: 200px;
 }

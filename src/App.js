@@ -3,26 +3,34 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header>
+    <div>
+      <header className="header">
         <h1>WORLDSTAR GOLDSTAR</h1>
-        <img src="WorldStarGoldStarSmall.png" alt="WORLDSTAR GOLDSTAR" />
+        <img className="logo" src="WorldStarGoldStarSmall.png" alt="WORLDSTAR GOLDSTAR" />
       </header>
-      <form>
-        <div>
-          <input type="text" id="yourName" />
-          <label for="yourName">Your Name</label>
+      <div className="container mt-5">
+        <div className="row">
+          <div className="col"></div>
+          <div className="col-6">
+            <form>
+              <div className="form-group pb-3">
+                <label for="yourName">Your Name</label>
+                <input type="text" className="form-control" id="yourName" placeholder="Enter your name" />
+              </div>
+              <div className="form-group pb-3">
+                <label for="theirName">Their Name</label>
+                <input type="text" className="form-control" id="theirName" placeholder="Enter their name" />
+              </div>
+              <div class="form-group pb-3">
+                <label for="reason">Why do they deserve a gold star?</label>
+                <textarea class="form-control" id="reason" rows="6"></textarea>
+              </div>
+              <button type="submit" className="btn btn-primary">Send</button>
+            </form>
+          </div>
+          <div className="col"></div>
         </div>
-        <div>
-          <input type="text" id="theirName" />
-          <label for="theirName">Who you want to give a gold star</label>
-        </div>
-        <div>
-          <textarea id="whatTheyDid" rows="3"></textarea>
-          <label for="whatTheyDid">Why?</label>
-        </div>
-        <button type="submit">Send</button>
-      </form>
+      </div>
     </div>
   );
 }

@@ -12,8 +12,33 @@ h1 {
   text-align: center;
   height: 320px;
   border-bottom: 2px solid;
+  position: relative;
 }
 
 .logo {
   width: 200px;
+}
+
+.puzzle-box-wrapper {
+  position: relative;
+}
+
+.slide {
+  width: 162px;
+  height: 100px;
+  background-color: #f8f8f8;
+  position: absolute;
+  transition: left 500ms ease-in-out 0s;
+}
+.buttons {
+  width: 162px;
+  height: 100px;
+  background-color: #f8f8f8;
+}
+
+.crystal-count {
+  position: absolute;
+  left: 52%;
+  top: 33%;
+  transform: rotate(15deg);
 }

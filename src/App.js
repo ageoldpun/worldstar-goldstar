@@ -99,9 +99,9 @@ class App extends React.Component {
 
               <h2 className="bar-title">Elementium Count!</h2>
               <div className="bar">
-                <span style={{ width: `${parseInt(elementiumCount, 10)}%`}}></span>
+                <span style={{ width: `${parseInt(elementiumCount, 10) * 10}%`}}></span>
               </div>
-              <p className="count">{elementiumCount}/100</p>
+              <p className="count">{elementiumCount}/10</p>
             </div>
 
             <h1>Gold Star</h1>

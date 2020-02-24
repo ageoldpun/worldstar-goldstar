@@ -19,9 +19,7 @@ h1 {
   width: 200px;
 }
 
-.puzzle-box-wrapper {
-  position: relative;
-}
+.puzzle-box-wrapper {}
 
 .slide {
   width: 162px;
@@ -38,7 +36,40 @@ h1 {
 
 .crystal-count {
   position: absolute;
-  left: 52%;
+  left: 64%;
   top: 33%;
-  transform: rotate(15deg);
+}
+
+.count {
+  margin: 0;
+  font-family: helvetica;
+  text-align: left;
+}
+.bar-title {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: left;
+  font-family: helvetica;
+  font-weight: 600;
+  font-size: 12px;
+}
+.bar {
+  width: 280px;
+  height: 8px;
+  position: relative;
+	background: lightgray;
+	box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+
+.bar > span {
+  display: block;
+  height: 100%;
+  background-color: Chartreuse;
+  box-shadow: 
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+  transition: width 2s;
+  transition: width 2s ease-in-out 0s;
 }

@@ -11,6 +11,6 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-const crystalRef = firebase.database().ref('crystals');
+const crystalRef = firebase.database();
 
 export default crystalRef;

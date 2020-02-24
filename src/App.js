@@ -14,7 +14,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: null,
+      crystalCount: '0',
+      barCount: '0',
+      elementiumCount: '0',
       sender: '',
       receiver: '',
       reason: '',
@@ -22,8 +24,14 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    crystalRef.on('value', (snapshot) => {
-      this.setState({ count: snapshot.val() });
+    crystalRef.ref('crystals').on('value', (snapshot) => {
+      this.setState({ crystalCount: snapshot.val() });
+    });
+    crystalRef.ref('bars').on('value', (snapshot) => {
+      this.setState({ barCount: snapshot.val() });
+    });
+    crystalRef.ref('elementium').on('value', (snapshot) => {
+      this.setState({ elementiumCount: snapshot.val() });
     });
   }
 
@@ -67,15 +75,33 @@ class App extends React.Component {
   };
 
   render() {
+    const {crystalCount,
+      barCount,
+      elementiumCount} = this.state;
     return (
-        <div>
+        <div className="wrapper">
           <header className="header">
             <h1>Worldstar</h1>
             <img className="logo" src="WorldStarGoldStarSmall.png" alt="Worldstar Gold Star" />
     
             <div className="crystal-count">
-              <h2>Crystal Count!</h2>
-              <span>{this.state.count}</span>
+              <h2 className="bar-title">Crystal Count!</h2>
+              <div className="bar">
+                <span style={{ width: `${parseInt(crystalCount, 10)}%`}}></span>
+              </div>
+              <p className="count">{crystalCount}/100</p>
+              
+              <h2 className="bar-title">Bar Count!</h2>
+              <div className="bar">
+                <span style={{ width: `${parseInt(barCount, 10)}%`}}></span>
+              </div>
+              <p className="count">{barCount}/100</p>
+
+              <h2 className="bar-title">Elementium Count!</h2>
+              <div className="bar">
+                <span style={{ width: `${parseInt(elementiumCount, 10)}%`}}></span>
+              </div>
+              <p className="count">{elementiumCount}/100</p>
             </div>
 
             <h1>Gold Star</h1>
